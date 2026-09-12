@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://propulsetonbiz.fr/sitemap.xml
