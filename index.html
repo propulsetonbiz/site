@@ -349,40 +349,32 @@
   .ig-pill svg{ width:20px; height:20px; }
 
   /* ============ ABOUT ============ */
-  .about-photo-wrap{ position:relative; margin:0 auto 60px; max-width:360px; }
-  .about-photo-wrap .frame{
-    position:relative; height:400px; border-radius:34px; border:1px solid var(--line);
-    background:radial-gradient(circle at 50% 30%, rgba(59,204,255,0.14), transparent 65%), linear-gradient(180deg, var(--space-bg-alt), var(--space-bg));
-    overflow:hidden; display:flex; align-items:flex-end; justify-content:center;
-  }
-  @media(min-width:768px){ .about-photo-wrap .frame{ height:460px; } }
-  .about-photo-wrap img{ width:88%; height:100%; object-fit:contain; object-position:bottom; }
+  .about-layout{ display:grid; grid-template-columns:1fr; gap:48px; align-items:start; }
+  @media(min-width:900px){ .about-layout{ grid-template-columns:360px 1fr; gap:72px; } .about-photo-wrap{ position:sticky; top:110px; } }
+  .about-photo-wrap{ position:relative; width:100%; max-width:360px; margin:0 auto; }
+  .about-photo-wrap .frame{ aspect-ratio:4/5; border-radius:34px; border:1px solid var(--line); overflow:hidden; background:var(--space-bg-alt); }
+  .about-photo-wrap img{ width:100%; height:100%; object-fit:cover; object-position:48% 25%; display:block; }
   .about-badge{
     position:absolute; top:-16px; left:14px; background:var(--blue); color:var(--space-bg);
     padding:12px 20px; border-radius:16px; font-weight:900; font-size:14px; transform:rotate(-3deg);
     box-shadow:0 15px 30px rgba(0,0,0,0.3); z-index:2;
   }
-  @media(min-width:768px){ .about-badge{ font-size:18px; padding:16px 26px; } }
-  .about-text{ max-width:760px; margin:0 auto; text-align:center; }
-  @media(min-width:768px){ .about-text{ text-align:left; } }
-  .about-text h3{ font-size:clamp(1.6rem,4vw,2.4rem); color:#fff; margin-bottom:18px; }
-  .about-text > p{ color:var(--ink-soft); font-size:15px; line-height:1.75; margin-bottom:14px; }
-  .real-box{ background:rgba(255,255,255,0.04); border:1px solid var(--line); border-radius:20px; padding:22px; margin:26px 0; text-align:left; }
-  .real-box .lbl{ font-size:11px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(--blue); margin-bottom:14px; }
-  .real-box ul{ display:flex; flex-direction:column; gap:12px; }
-  .real-box li{ display:flex; gap:10px; font-size:13.5px; color:var(--ink-soft); line-height:1.55; }
-  .real-box li svg{ width:16px; height:16px; color:var(--blue); flex-shrink:0; margin-top:3px; }
-  .real-box li b{ color:#fff; }
-  .qui-lbl{ font-size:11px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(--orange); margin-bottom:8px; text-align:left; }
-  .qui-quote{ font-style:italic; color:var(--ink-soft); font-size:14px; line-height:1.7; text-align:left; margin-bottom:26px; }
-  .mini-badges{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-  .mini-badges div{ background:rgba(255,255,255,0.04); border:1px solid var(--line); border-radius:16px; padding:16px; text-align:center; }
-  @media(min-width:768px){ .mini-badges div{ text-align:left; } }
-  .mini-badges svg{ width:18px; height:18px; margin-bottom:8px; }
-  .mini-badges .a svg{ color:var(--orange); }
-  .mini-badges .b svg{ color:var(--blue); }
-  .mini-badges h5{ font-size:11px; font-weight:800; text-transform:uppercase; color:#fff; margin-bottom:2px; }
-  .mini-badges p{ font-size:11px; color:var(--ink-dim); }
+  @media(min-width:768px){ .about-badge{ font-size:16px; padding:14px 22px; } }
+  .about-text h3{ font-size:clamp(1.8rem,4vw,2.6rem); color:#fff; margin-bottom:18px; }
+  .about-text .lead{ font-size:16px; color:var(--ink-soft); line-height:1.75; margin-bottom:40px; }
+  .about-block-title{ font-size:11px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--orange); margin:0 0 20px; }
+  .path{ list-style:none; margin:0 0 44px 6px; padding:0 0 0 28px; border-left:2px solid rgba(249,185,74,0.25); }
+  .path li{ position:relative; padding-bottom:28px; }
+  .path li:last-child{ padding-bottom:0; }
+  .path li::before{ content:""; position:absolute; left:-35px; top:5px; width:12px; height:12px; border-radius:50%; background:var(--orange); box-shadow:0 0 0 4px var(--space-bg); }
+  .path .when{ font-size:10px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--orange); margin:0 0 4px; }
+  .path h4{ font-size:17px; color:#fff; margin:0 0 6px; }
+  .path p{ font-size:14px; color:var(--ink-mute); line-height:1.7; margin:0; }
+  .path p strong{ color:#fff; font-weight:700; }
+  .about-text .sport-txt{ font-size:14px; color:var(--ink-mute); line-height:1.7; margin:0; }
+  .about-text .sport-txt strong{ color:#fff; font-weight:700; }
+  .chips{ display:flex; flex-wrap:wrap; gap:10px; margin:0 0 16px; }
+  .chips span{ padding:9px 16px; border-radius:14px; background:rgba(255,255,255,0.05); border:1px solid var(--line); font-weight:700; font-size:12px; color:#fff; }
 
   .spirit{ margin-top:90px; padding-top:70px; border-top:1px solid var(--line); text-align:center; max-width:760px; margin-left:auto; margin-right:auto; }
   .spirit h3{ font-size:clamp(1.5rem,3.5vw,2.2rem); color:#fff; margin-bottom:16px; }
@@ -723,36 +715,46 @@
   <!-- ============ ABOUT ============ -->
   <section id="about">
     <div class="container">
-      <div class="about-photo-wrap reveal">
-        <div class="frame">
-          <img src="assets/lorenzo-photo.png" alt="Lorenzo Trouillet" loading="lazy">
+      <div class="about-layout">
+        <div class="about-photo-wrap reveal">
+          <div class="frame">
+            <img src="assets/lorenzo-profil.jpg" alt="Lorenzo Trouillet, community manager" loading="lazy">
+          </div>
+          <div class="about-badge">Créatif &amp; Rigueur.</div>
         </div>
-        <div class="about-badge">Créatif &amp; Rigueur.</div>
-      </div>
 
-      <div class="about-text reveal">
-        <p class="eyebrow">Derrière l'objectif</p>
-        <h3>Moi, c'est <span class="accent-orange">Lorenzo.</span></h3>
-        <p>Étudiant et entrepreneur, mon quotidien est rythmé par une passion : le digital, sous toutes ses formes — création de contenu, stratégie et gestion de communauté.</p>
-        <p>Mon parcours est marqué par une volonté de concret : de la création de contenu à la présidence d'une association, en passant par ma formation en marketing digital. Une chose ne change pas : l'envie de construire, tester et faire grandir.</p>
+        <div class="about-text reveal">
+          <p class="eyebrow">Derrière l'objectif</p>
+          <h3>Moi, c'est <span class="accent-orange">Lorenzo.</span></h3>
+          <p class="lead">L'entrepreneuriat, c'est une envie qui ne m'a jamais quitté. J'ai appris sur le terrain, en créant, en testant et en vendant, avant de structurer tout ça avec une formation en marketing.</p>
 
-        <div class="real-box">
-          <p class="lbl">Ce que je réalise :</p>
-          <ul>
-            <li><svg><use href="#i-checkcircle"/></svg><span><b>Expertise Réseaux Sociaux :</b> Ancien créateur de contenu, j'ai fait grandir un compte à plus de 40 000 abonnés avec des vidéos dépassant le million de vues.</span></li>
-            <li><svg><use href="#i-checkcircle"/></svg><span><b>Formation Marketing :</b> Étudiant en BUT Techniques de Commercialisation, spécialisation i-marketing.</span></li>
-            <li><svg><use href="#i-checkcircle"/></svg><span><b>Expérience Professionnelle :</b> 1 an d'expérience dans la gestion de réseaux sociaux pour des entreprises diversifiées.</span></li>
-            <li><svg><use href="#i-checkcircle"/></svg><span><b>Engagement Associatif :</b> Président d'une association sportive de vélo.</span></li>
-            <li><svg><use href="#i-checkcircle"/></svg><span><b>Rigueur et Mobilité :</b> Certifié OpenClassrooms et titulaire du permis de conduire.</span></li>
+          <p class="about-block-title">Mon parcours</p>
+          <ul class="path">
+            <li>
+              <p class="when">À 14 ans</p>
+              <h4>Je me lance sur les réseaux</h4>
+              <p>Jusqu'à <strong>30 000 abonnés</strong> sur mon compte et des vidéos qui dépassent <strong>1 million de vues</strong>.</p>
+            </li>
+            <li>
+              <p class="when">Ensuite</p>
+              <h4>Achat-revente de vêtements sur Vinted</h4>
+              <p>Des ventes suffisamment importantes pour que Vinted finisse par bloquer mes comptes.</p>
+            </li>
+            <li>
+              <p class="when">Puis</p>
+              <h4>Formations de recettes de cuisine numériques</h4>
+              <p>Plus de <strong>500 ventes en 2 semaines</strong>.</p>
+            </li>
+            <li>
+              <p class="when">Aujourd'hui</p>
+              <h4>BUT Techniques de Commercialisation, à Montpellier</h4>
+              <p>Des bases solides en marketing digital, notamment pour réaliser des analyses poussées. En parallèle, <strong>1 an d'expérience</strong> dans la gestion de réseaux sociaux pour des entreprises diversifiées.</p>
+            </li>
           </ul>
-        </div>
 
-        <p class="qui-lbl">Qui je suis :</p>
-        <p class="qui-quote">"Je me définis comme un exécutant qui n'attend pas les opportunités, mais qui les crée. La gestion de mes propres réseaux et mon engagement associatif m'ont appris la rigueur, et mes projets digitaux m'ont appris la stratégie."</p>
-
-        <div class="mini-badges">
-          <div class="a"><svg><use href="#i-rocket"/></svg><h5>Entrepreneur</h5><p>Soif de découverte.</p></div>
-          <div class="b"><svg><use href="#i-sparkles"/></svg><h5>Certifié</h5><p>OpenClassrooms.</p></div>
+          <p class="about-block-title">À côté</p>
+          <div class="chips"><span>Cyclisme</span><span>VTT</span><span>Coupe de France</span><span>Course à pied</span><span>Salle de sport</span><span>Voyages</span></div>
+          <p class="sport-txt">Le sport m'a appris la rigueur. Je suis aussi <strong>président d'une association sportive de vélo</strong>, et j'adore voyager pour découvrir de nouvelles cultures.</p>
         </div>
       </div>
 
