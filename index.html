@@ -35,7 +35,10 @@
   "email": "propulsetonbiz.contact@gmail.com",
   "founder": {
     "@type": "Person",
-    "name": "Lorenzo Trouillet"
+    "name": "Lorenzo Trouillet",
+    "sameAs": [
+      "https://www.linkedin.com/in/lorenzo-trouillet-9ab31a3a2/"
+    ]
   },
   "address": {
     "@type": "PostalAddress",
@@ -471,7 +474,7 @@
   .foot-brand{ display:inline-flex; align-items:center; margin-bottom:26px; }
   .foot-logo{ height:38px; width:auto; }
   footer.site > .container > p{ color:var(--ink-mute); font-weight:500; max-width:360px; margin:0 auto 22px; }
-  footer .ig-pill{ margin-bottom:40px; }
+  .socials{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:40px; }
   footer .ig-pill:hover{ background:var(--orange); color:var(--space-bg); }
   .foot-legal{ border-top:1px solid var(--line); padding-top:26px; display:flex; flex-direction:column; gap:18px; align-items:center; }
   @media(min-width:640px){ .foot-legal{ flex-direction:row; justify-content:space-between; } }
@@ -520,6 +523,7 @@
 <symbol id="i-checkcircle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></symbol>
 <symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/></symbol>
 <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></symbol>
+<symbol id="i-linkedin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
 </defs>
 </svg>
 
@@ -888,8 +892,11 @@
 <footer class="site">
   <div class="container">
     <a href="#home" class="foot-brand"><img src="assets/wordmark.png" alt="Propulse Ton Biz" class="foot-logo"></a>
-    <p>Retrouvez-moi sur Instagram pour suivre mes dernières envolées et conseils.</p>
-    <a class="ig-pill" href="https://www.instagram.com/propulse.tonbiz/" target="_blank" rel="noopener noreferrer"><svg><use href="#i-instagram"/></svg>@propulse.tonbiz</a>
+    <p>Retrouvez-moi sur Instagram et LinkedIn pour suivre mes dernières envolées et conseils.</p>
+    <div class="socials">
+      <a class="ig-pill" href="https://www.instagram.com/propulse.tonbiz/" target="_blank" rel="noopener noreferrer"><svg><use href="#i-instagram"/></svg>@propulse.tonbiz</a>
+      <a class="ig-pill" href="https://www.linkedin.com/in/lorenzo-trouillet-9ab31a3a2/" target="_blank" rel="noopener noreferrer"><svg><use href="#i-linkedin"/></svg>Lorenzo Trouillet</a>
+    </div>
     <div class="foot-legal">
       <div class="links"><a href="mentions-legales.html">Mentions Légales</a><span class="dot"></span><span>© 2026 Propulse Ton Biz - Lorenzo Trouillet</span></div>
       <button class="to-top" id="toTop" aria-label="Haut de page"><svg><use href="#i-chevup"/></svg></button>
