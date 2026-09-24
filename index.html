@@ -384,6 +384,13 @@
   .path h4{ font-size:17px; color:#fff; margin:0 0 6px; }
   .path p{ font-size:14px; color:var(--ink-mute); line-height:1.7; margin:0; }
   .path p strong{ color:#fff; font-weight:700; }
+  .workspace{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:0 0 14px; }
+  .workspace figure{ margin:0; aspect-ratio:3/4; border-radius:22px; overflow:hidden; border:1px solid var(--line); background:var(--space-bg-alt); }
+  .workspace img{ width:100%; height:100%; object-fit:cover; display:block; }
+  @media(max-width:639px){
+    .workspace{ display:flex; overflow-x:auto; scroll-snap-type:x mandatory; gap:12px; margin:0 -20px 14px; padding:0 20px; -webkit-overflow-scrolling:touch; }
+    .workspace figure{ flex:0 0 68%; scroll-snap-align:start; }
+  }
   .sport-txt{ font-size:14px; color:var(--ink-mute); line-height:1.7; margin:0; }
   .sport-txt strong{ color:#fff; font-weight:700; }
   .chips{ display:flex; flex-wrap:wrap; gap:10px; margin:0 0 16px; }
@@ -767,6 +774,16 @@
           <p class="about-block-title">À côté</p>
           <div class="chips"><span>Cyclisme</span><span>VTT</span><span>Coupe de France</span><span>Course à pied</span><span>Salle de sport</span><span>Voyages</span></div>
           <p class="sport-txt">Le sport m'a appris la rigueur. Je suis aussi <strong>président d'une association sportive de vélo</strong>, et j'adore voyager pour découvrir de nouvelles cultures.</p>
+        </div>
+
+        <div class="reveal" style="margin-top:44px">
+          <p class="about-block-title">Mon espace de travail</p>
+          <div class="workspace">
+            <figure><img src="assets/espace-travail-1.jpg" alt="Mon bureau : MacBook avec le logo Propulse Ton Biz, écran incurvé et fond de montagnes" loading="lazy"></figure>
+            <figure><img src="assets/espace-travail-2.jpg" alt="Vue d'ensemble de mon espace de travail : écran, clavier, souris et MacBook" loading="lazy"></figure>
+            <figure><img src="assets/espace-travail-3.jpg" alt="Détail de mon bureau : clavier, souris et écran incurvé" loading="lazy"></figure>
+          </div>
+          <p class="sport-txt">C'est ici que je prépare vos contenus.</p>
         </div>
       </div>
 
