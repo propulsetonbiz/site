@@ -345,7 +345,10 @@
   .pf-overlay{ position:fixed; inset:0; background:rgba(0,10,20,0.78); backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px); z-index:200; display:flex; align-items:center; justify-content:center; padding:20px; opacity:0; pointer-events:none; transition:opacity .25s ease; }
   .pf-overlay.open{ opacity:1; pointer-events:auto; }
   .pf-modal{ position:relative; width:100%; max-width:720px; max-height:90vh; overflow-y:auto; background:var(--space-bg-alt); border:1px solid var(--line); border-radius:28px; }
+  .pm-imgwrap{ overflow-x:auto; }
   .pm-img{ width:100%; aspect-ratio:16/9; object-fit:cover; display:block; }
+  .pf-modal.wide{ max-width:1040px; }
+  .pf-modal.wide .pm-img{ aspect-ratio:16/10; min-width:900px; }
   .pm-body{ padding:26px 28px 30px; }
   .pm-type{ font-size:10px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:var(--blue); margin:0 0 6px; }
   .pm-title{ font-size:24px; color:#fff; margin:0 0 12px; }
@@ -878,9 +881,9 @@
 </footer>
 
 <div class="pf-overlay" id="pfOverlay" aria-hidden="true">
-  <div class="pf-modal" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+  <div class="pf-modal" id="pfModal" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
     <button type="button" class="pm-close" id="pmClose" aria-label="Fermer"><svg><use href="#i-x"/></svg></button>
-    <img class="pm-img" id="pmImg" src="" alt="">
+    <div class="pm-imgwrap"><img class="pm-img" id="pmImg" src="" alt=""></div>
     <div class="pm-body">
       <p class="pm-type" id="pmType"></p>
       <h3 class="pm-title" id="pmTitle"></h3>
@@ -920,15 +923,16 @@
     p3: { type:"Exemple de livrable · Accompagnement autonome", title:"Templates de stories", img:"assets/portfolio-templates-stories.jpg", alt:"Exemple de templates de stories",
       intro:"Exemple de templates de stories, dans l'esprit de ce que je crée pour l'offre d'accompagnement autonome : des modèles prêts à l'emploi, aux couleurs du client.",
       list:["Formats verticaux pensés pour les stories","Zones de texte et de visuel à remplacer en quelques secondes","Une cohérence visuelle d'une story à l'autre"], note:"Visuel d'exemple créé pour illustrer ce type de livrable, sans client réel." },
-    p4: { type:"Exemple de livrable · Gestion complète", title:"Calendrier éditorial", img:"assets/portfolio-calendrier.jpg", alt:"Exemple de calendrier éditorial mensuel",
-      intro:"Exemple de calendrier éditorial mensuel, tel que je le construis avec chaque client : une vue d'ensemble de ce qui est publié, quand et sous quel format.",
-      list:["Formats variés : reels, stories, photos, carrousels","Un rythme adapté à votre besoin et à la fréquence choisie","Un rendez-vous annexe à mi-mois et une analyse détaillée en fin de mois"], note:"Visuel d'exemple créé pour illustrer ce type de livrable, sans client réel." }
+    p4: { type:"Exemple de livrable · Gestion complète", title:"Calendrier éditorial", img:"assets/portfolio-calendrier.jpg", alt:"Exemple de calendrier éditorial : planning par jour, créneau horaire et réseau", wide:true,
+      intro:"Exemple de calendrier éditorial, tel que je le construis avec chaque client : une semaine détaillée (jours, créneaux horaires, réseaux, formats) et le déroulé du mois autour.",
+      list:["Un planning par réseau : Instagram, TikTok et Facebook","Des créneaux horaires adaptés à l'audience de chaque réseau","Pour chaque publication : un format, un angle et un objectif (hook, CTA, storytelling…)","Des piliers de contenu et des indicateurs suivis chaque mois : portée, taux d'engagement, enregistrements…","Un rendez-vous annexe à mi-mois et une analyse détaillée en fin de mois"], note:"Visuel d'exemple créé pour illustrer ce type de livrable, sans client réel." }
   };
   var pfOverlay = document.getElementById('pfOverlay');
   var pfClose = document.getElementById('pmClose');
   var pfLast = null;
   function pfOpen(id, trigger){
     var d = PF[id]; if(!d) return;
+    document.getElementById('pfModal').classList.toggle('wide', !!d.wide);
     document.getElementById('pmImg').src = d.img;
     document.getElementById('pmImg').alt = d.alt;
     document.getElementById('pmType').textContent = d.type;
