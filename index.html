@@ -55,7 +55,6 @@
     }
   ],
   "description": "Community manager freelance à Saint-Maximin-la-Sainte-Baume : création de contenu, gestion des réseaux sociaux (Instagram, TikTok, Facebook) et shooting photo/drone pour commerces et artisans locaux dans le Var.",
-  "priceRange": "€€",
   "sameAs": [
     "https://www.instagram.com/propulse.tonbiz/"
   ]
@@ -268,103 +267,30 @@
   .sec-head p{ color:var(--ink-mute); font-size:14px; font-weight:500; }
 
   /* ============ OFFERS ============ */
-  .offers-grid{ display:grid; grid-template-columns:1fr; gap:24px; margin-bottom:70px; }
-  @media(min-width:860px){ .offers-grid{ grid-template-columns:repeat(3,1fr); align-items:start; } }
+  .offers-grid{ display:grid; grid-template-columns:1fr; gap:24px; max-width:980px; margin:0 auto; }
+  @media(min-width:860px){ .offers-grid{ grid-template-columns:repeat(2,1fr); align-items:stretch; } }
   .offer-card{
     border-radius:28px; padding:32px 28px; position:relative;
     display:flex; flex-direction:column; height:100%;
   }
   .offer-card.featured{ border-color:var(--blue) !important; box-shadow:0 0 40px rgba(59,204,255,0.15); }
-  @media(min-width:860px){ .offer-card.featured{ transform:scale(1.03); } }
   .offer-badge{
     position:absolute; top:-13px; left:50%; transform:translateX(-50%);
     background:var(--blue); color:var(--space-bg);
     font-size:10px; font-weight:900; letter-spacing:0.1em; text-transform:uppercase;
     padding:5px 16px; border-radius:999px; white-space:nowrap;
   }
-  .offer-card h3{ font-size:19px; color:#fff; margin-bottom:4px; }
-  .offer-card .subtitle{ font-size:11px; font-weight:700; letter-spacing:0.04em; opacity:.85; margin-bottom:20px; }
-  .offer-card .feat-list{ display:flex; flex-direction:column; gap:14px; margin-bottom:24px; }
-  .offer-card .feat-list li{ display:flex; gap:10px; font-size:13.5px; color:var(--ink-soft); line-height:1.5; }
-  .offer-card .feat-list li svg{ width:16px; height:16px; flex-shrink:0; margin-top:2px; color:var(--blue); }
-  .offer-details-btn{
-    display:inline-flex; align-items:center; gap:8px;
-    font-size:11px; font-weight:900; text-transform:uppercase; color:var(--blue);
-    margin-bottom:20px;
-  }
-  .offer-details-btn:hover{ color:#fff; }
-  .offer-details-btn svg{ width:14px; height:14px; }
+  .offer-card h3{ font-size:20px; color:#fff; margin-bottom:6px; }
+  .offer-card .subtitle{ font-size:13px; font-weight:600; line-height:1.5; margin-bottom:22px; }
+  .offer-card .feat-list{ display:flex; flex-direction:column; gap:14px; margin-bottom:28px; }
+  .offer-card .feat-list li{ display:flex; gap:10px; font-size:14px; color:var(--ink-soft); line-height:1.5; }
+  .offer-card .feat-list li svg{ width:16px; height:16px; flex-shrink:0; margin-top:3px; color:var(--blue); }
   .offer-card .price-block{ border-top:1px solid var(--line); padding-top:18px; margin-top:auto; margin-bottom:20px; }
-  .offer-card .price-block .lbl{ font-size:9px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-dim); }
-  .offer-card .price-block .note{ font-size:11px; color:var(--ink-mute); margin-bottom:4px; }
-  .offer-card .price-block .price{ font-size:26px; font-weight:900; font-family:var(--font-heading); color:#fff; }
+  .offer-card .price-block .lbl{ font-size:9px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-dim); margin-bottom:6px; }
+  .offer-card .price-block .txt{ font-size:14.5px; font-weight:700; color:#fff; line-height:1.5; }
   .offer-card .btn{ width:100%; padding:14px; font-size:14px; }
-
-  /* comparison tool */
-  .duel{ max-width:840px; margin:0 auto; }
-  .duel-head{ text-align:center; margin-bottom:40px; }
-  .duel-pill{
-    display:inline-flex; align-items:center; gap:8px;
-    background:rgba(249,185,74,0.1); border:1px solid rgba(249,185,74,0.2); color:var(--orange);
-    font-size:10px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase;
-    padding:7px 16px; border-radius:999px; margin-bottom:14px;
-  }
-  .duel-head h3{ font-size:clamp(1.4rem,3vw,2rem); color:#fff; }
-  .duel-grid{ position:relative; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-  @media(min-width:640px){ .duel-grid{ gap:36px; } }
-  .vs-badge{
-    position:absolute; top:60px; left:50%; transform:translate(-50%,-50%); z-index:5;
-    width:46px; height:46px; border-radius:50%;
-    background:var(--space-bg-alt); border:2px solid var(--line);
-    display:flex; align-items:center; justify-content:center;
-    font-weight:900; font-style:italic; color:var(--orange); font-size:15px;
-  }
-  .duel-col{ border-radius:28px; padding:18px; border-top:4px solid var(--blue); }
-  .duel-col.col-b{ border-top-color:var(--orange); }
-  .duel-col select{
-    width:100%; background:rgba(255,255,255,0.05); border:1px solid var(--line); color:#fff;
-    font-weight:900; font-family:var(--font-heading); font-size:12px; padding:12px 14px; border-radius:12px;
-    appearance:none; margin-bottom:24px; cursor:pointer;
-  }
-  @media(min-width:640px){ .duel-col select{ font-size:15px; } }
-  .duel-row{ margin-bottom:20px; }
-  .duel-row .lbl{ display:flex; align-items:center; gap:6px; font-size:9px; font-weight:900; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-dim); margin-bottom:6px; }
-  .duel-row .lbl svg{ width:11px; height:11px; color:var(--blue); }
-  .duel-row .val{ padding:12px 14px; border-radius:12px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.04); font-weight:800; font-size:12px; color:#fff; }
-  @media(min-width:640px){ .duel-row .val{ font-size:15px; padding:16px; } }
-  .duel-foot{ text-align:center; margin-top:50px; }
-
-  /* offer modal */
-  .modal-overlay{
-    position:fixed; inset:0; background:rgba(0,10,20,0.75); backdrop-filter:blur(4px);
-    z-index:200; display:flex; align-items:center; justify-content:center; padding:20px;
-    opacity:0; pointer-events:none; transition:opacity .25s ease;
-  }
-  .modal-overlay.open{ opacity:1; pointer-events:auto; }
-  .modal-card{
-    background:var(--space-bg-alt); border:1px solid var(--line); border-radius:32px;
-    max-width:480px; width:100%; padding:32px; max-height:88vh; overflow-y:auto;
-    position:relative;
-  }
-  .modal-close{
-    position:absolute; top:20px; right:20px; width:36px; height:36px; border-radius:50%;
-    background:rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:center; color:#fff;
-  }
-  .modal-close svg{ width:16px; height:16px; }
-  .modal-card .head{ display:flex; gap:16px; align-items:flex-start; margin-bottom:22px; padding-right:40px; }
-  .modal-card .head h4{ font-size:20px; color:#fff; margin-bottom:4px; }
-  .modal-card .head .sub{ font-size:10px; font-weight:800; letter-spacing:0.06em; }
-  .modal-quote{ border-left:2px solid var(--blue); background:rgba(255,255,255,0.03); padding:16px 18px; border-radius:0 14px 14px 0; font-style:italic; color:var(--ink-soft); font-size:14px; margin-bottom:24px; }
-  .modal-inc-lbl{ font-size:10px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-dim); margin-bottom:14px; }
-  .modal-card ul{ display:flex; flex-direction:column; gap:16px; margin-bottom:24px; }
-  .modal-card ul li{ display:flex; gap:12px; font-size:14px; color:#fff; line-height:1.5; }
-  .modal-card ul li svg{ width:20px; height:20px; flex-shrink:0; color:var(--blue); }
-  .modal-stats{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:24px; }
-  .modal-stats div{ background:rgba(255,255,255,0.04); border-radius:14px; padding:14px; }
-  .modal-stats .lbl{ font-size:9px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-dim); margin-bottom:4px; }
-  .modal-stats .lbl.blue{ color:var(--blue); }
-  .modal-stats .v{ font-size:13px; font-weight:700; color:#fff; }
-  .modal-card .btn{ width:100%; }
+  .offers-note{ text-align:center; margin-top:34px; color:var(--ink-mute); font-size:14px; }
+  .offers-note a{ color:var(--blue); font-weight:700; }
 
   /* ============ SERVICES ============ */
   .services-grid{ display:grid; grid-template-columns:1fr; gap:18px; margin-bottom:60px; }
@@ -381,12 +307,20 @@
   .method-panel .top{ text-align:center; margin-bottom:44px; }
   .method-panel .top h4{ font-size:22px; color:#fff; margin-bottom:8px; }
   .method-panel .top .tag{ font-size:10px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-dim); }
-  .method-grid{ display:grid; grid-template-columns:1fr; gap:28px; }
-  @media(min-width:640px){ .method-grid{ grid-template-columns:1fr 1fr; gap:40px; } }
-  .method-step{ display:flex; gap:16px; }
-  .method-step .icon-badge{ background:rgba(255,255,255,0.05); border:1px solid var(--line); color:var(--orange); }
-  .method-step h5{ font-size:15px; color:#fff; margin-bottom:6px; }
-  .method-step p{ font-size:12.5px; color:var(--ink-mute); line-height:1.6; }
+  .timeline{ position:relative; display:flex; flex-direction:column; gap:28px; max-width:640px; margin:0 auto; }
+  .timeline::before{ content:""; position:absolute; left:19px; top:8px; bottom:8px; width:2px; background:linear-gradient(to bottom, var(--orange), rgba(249,185,74,0.12)); }
+  .tl-step{ position:relative; display:flex; gap:20px; }
+  .tl-dot{
+    width:40px; height:40px; flex-shrink:0; border-radius:50%; position:relative; z-index:1;
+    background:var(--space-bg); border:2px solid var(--orange);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-heading); font-weight:900; font-size:14px; color:var(--orange);
+  }
+  .tl-step.post .tl-dot{ border-color:var(--blue); color:var(--blue); }
+  .tl-body .tl-when{ font-size:10px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--orange); margin:2px 0 4px; }
+  .tl-step.post .tl-body .tl-when{ color:var(--blue); }
+  .tl-body h5{ font-size:16px; color:#fff; margin-bottom:6px; }
+  .tl-body p{ font-size:13px; color:var(--ink-mute); line-height:1.6; }
   .method-foot{ text-align:center; margin-top:44px; }
 
   /* ============ PORTFOLIO ============ */
@@ -632,100 +566,51 @@
     <div class="container">
       <div class="sec-head reveal">
         <p class="eyebrow orange">🚀 Mes offres</p>
-        <h2>Choisissez votre niveau de <span class="accent-blue">propulsion.</span></h2>
-        <p>Des solutions stratégiques conçues pour transformer votre présence digitale en véritable levier de croissance.</p>
+        <h2>Deux façons de vous <span class="accent-blue">propulser.</span></h2>
+        <p>Une formule clé en main où je m'occupe de tout, ou une formule plus autonome où je vous donne les outils. Dans les deux cas, on part de votre besoin.</p>
       </div>
 
       <div class="offers-grid">
-        <!-- BIENVENUE -->
+        <!-- OFFRE PRINCIPALE -->
+        <div class="offer-card glass-card featured reveal">
+          <span class="offer-badge">Offre principale</span>
+          <div class="icon-badge" style="background:var(--blue); color:var(--space-bg); margin-bottom:16px;"><svg><use href="#i-rocket"/></svg></div>
+          <h3>Gestion complète de vos réseaux</h3>
+          <p class="subtitle" style="color:var(--blue)">Je m'occupe de tout, vous vous concentrez sur votre métier.</p>
+          <ul class="feat-list">
+            <li><svg><use href="#i-check"/></svg>Gestion de l'intégralité de vos réseaux sociaux</li>
+            <li><svg><use href="#i-check"/></svg>1 à 2 visites par mois pour capter votre contenu (photos, vidéos)</li>
+            <li><svg><use href="#i-check"/></svg>Calendrier éditorial construit sur mesure</li>
+            <li><svg><use href="#i-check"/></svg>Fréquence de publication adaptée à votre besoin</li>
+            <li><svg><use href="#i-check"/></svg>Analyse détaillée des performances en fin de mois</li>
+          </ul>
+          <div class="price-block">
+            <p class="lbl">Tarif</p>
+            <p class="txt">Flexible : adapté à votre besoin et à la fréquence de contenu souhaitée.</p>
+          </div>
+          <a href="#contact" class="btn btn-blue">Demander un devis <svg><use href="#i-arrow"/></svg></a>
+        </div>
+
+        <!-- OFFRE AUTONOME -->
         <div class="offer-card glass-card reveal" style="border:1px solid var(--line)">
           <div class="icon-badge" style="background:var(--orange); color:var(--space-bg); margin-bottom:16px;"><svg><use href="#i-zap"/></svg></div>
-          <h3>Pack Bienvenue</h3>
-          <p class="subtitle" style="color:var(--orange)">"Le coup de boost immédiat sans risque."</p>
+          <h3>Accompagnement autonome</h3>
+          <p class="subtitle" style="color:var(--orange)">Je vous guide, vous publiez plus facilement et plus vite.</p>
           <ul class="feat-list">
-            <li><svg><use href="#i-check"/></svg>Sur place (30-45 min) : Shooting professionnel + Conseils stratégiques</li>
-            <li><svg><use href="#i-check"/></svg>Contenu : 1 Reel dynamique (montage pro) + 3 Photos HD</li>
-            <li><svg><use href="#i-check"/></svg>Livraison : Fichiers prêts à poster envoyés sous 48h</li>
-            <li><svg><use href="#i-check"/></svg>Engagement : Aucun. Prestation unique pour tester l'impact</li>
+            <li><svg><use href="#i-check"/></svg>Templates déjà créés, prêts à l'emploi (stories notamment)</li>
+            <li><svg><use href="#i-check"/></svg>Refonte de vos réseaux pour repartir sur de bonnes bases</li>
+            <li><svg><use href="#i-check"/></svg>Un accompagnement pour prendre en main vos outils</li>
+            <li><svg><use href="#i-check"/></svg>Vous postez vous-même, plus simplement et plus rapidement</li>
           </ul>
-          <button class="offer-details-btn" data-modal="m0">Voir les détails complets <svg><use href="#i-chevdown"/></svg></button>
           <div class="price-block">
-            <span class="lbl">Investissement</span>
-            <p class="note">Sans frais cachés</p>
-            <p class="price">89 €</p>
+            <p class="lbl">Tarif</p>
+            <p class="txt">Sur demande : parlons de votre situation.</p>
           </div>
-          <a href="#contact" class="btn btn-propulse">Propulser mon business <svg><use href="#i-chevdown" style="transform:rotate(-90deg)"/></svg></a>
-        </div>
-
-        <!-- CROISSANCE -->
-        <div class="offer-card glass-card featured reveal">
-          <span class="offer-badge">Recommandé</span>
-          <div class="icon-badge" style="background:var(--blue); color:var(--space-bg); margin-bottom:16px;"><svg><use href="#i-trending"/></svg></div>
-          <h3>Pack Croissance</h3>
-          <p class="subtitle" style="color:var(--blue)">"Votre présence automatique chaque semaine."</p>
-          <ul class="feat-list">
-            <li><svg><use href="#i-check"/></svg>Sur place (1h / mois) : On capte tout le contenu du mois en une seule fois</li>
-            <li><svg><use href="#i-check"/></svg>Contenu : 4 Reels (1 par semaine) + Stories hebdomadaires + Photos</li>
-            <li><svg><use href="#i-check"/></svg>Gestion : Je m'occupe de la programmation et de la publication pour vous</li>
-            <li><svg><use href="#i-check"/></svg>Le + : Stratégie de hashtags et audios tendances inclus</li>
-          </ul>
-          <button class="offer-details-btn" data-modal="m1">Voir les détails complets <svg><use href="#i-chevdown"/></svg></button>
-          <div class="price-block">
-            <span class="lbl">Investissement</span>
-            <p class="note">Sans frais cachés</p>
-            <p class="price">Dès 290 € / mois</p>
-          </div>
-          <a href="#contact" class="btn btn-blue">Propulser mon business <svg><use href="#i-chevdown" style="transform:rotate(-90deg)"/></svg></a>
-        </div>
-
-        <!-- DOMINATION -->
-        <div class="offer-card glass-card reveal" style="border:1px solid var(--line)">
-          <div class="icon-badge" style="background:var(--red); color:#fff; margin-bottom:16px;"><svg><use href="#i-rocket"/></svg></div>
-          <h3>Pack Domination</h3>
-          <p class="subtitle" style="color:var(--red)">"Devenir la référence incontournable de la ville."</p>
-          <ul class="feat-list">
-            <li><svg><use href="#i-check"/></svg>Sur place (2 sessions / mois) : Un suivi ultra-complet et des mises à jour constantes</li>
-            <li><svg><use href="#i-check"/></svg>Contenu : 12 Reels par mois + Stories quotidiennes + Shooting premium</li>
-            <li><svg><use href="#i-check"/></svg>Gestion : Gestion totale des réseaux, réponse aux commentaires et modération</li>
-            <li><svg><use href="#i-check"/></svg>Stratégie : Analyse poussée de la concurrence et optimisation des performances</li>
-          </ul>
-          <button class="offer-details-btn" data-modal="m2">Voir les détails complets <svg><use href="#i-chevdown"/></svg></button>
-          <div class="price-block">
-            <span class="lbl">Investissement</span>
-            <p class="note">Sans frais cachés</p>
-            <p class="price">Sur Devis</p>
-          </div>
-          <a href="#contact" class="btn btn-red">Propulser mon business <svg><use href="#i-chevdown" style="transform:rotate(-90deg)"/></svg></a>
+          <a href="#contact" class="btn btn-propulse">Me contacter <svg><use href="#i-arrow"/></svg></a>
         </div>
       </div>
 
-      <!-- comparison duel -->
-      <div class="duel reveal">
-        <div class="duel-head">
-          <span class="duel-pill"><svg width="12" height="12"><use href="#i-chart"/></svg>Outil de comparaison stratégique</span>
-          <h3>Duel de <span class="accent-blue">Performance</span></h3>
-        </div>
-        <div class="duel-grid">
-          <div class="vs-badge">VS</div>
-          <div class="duel-col glass-card col-a">
-            <select id="dselA">
-              <option value="0">Pack Bienvenue</option>
-              <option value="1" selected>Pack Croissance</option>
-              <option value="2">Pack Domination</option>
-            </select>
-            <div id="dcolA"></div>
-          </div>
-          <div class="duel-col glass-card col-b">
-            <select id="dselB">
-              <option value="0">Pack Bienvenue</option>
-              <option value="1">Pack Croissance</option>
-              <option value="2" selected>Pack Domination</option>
-            </select>
-            <div id="dcolB"></div>
-          </div>
-        </div>
-        <div class="duel-foot"><a href="#contact" class="btn btn-propulse">On décolle ? <svg><use href="#i-arrow"/></svg></a></div>
-      </div>
+      <p class="offers-note reveal">Pas sûr de la formule qui vous convient ? <a href="#contact">Parlons-en</a>, on ajuste ensemble.</p>
     </div>
   </section>
 
@@ -763,25 +648,33 @@
 
       <div class="method-panel reveal">
         <div class="top">
-          <p class="tag">La méthode Lorenzo : Transparence &amp; Efficacité</p>
+          <p class="tag">Un mois type : comment je procède</p>
           <h4>Mon <span class="accent-orange">carnet</span> de bord</h4>
         </div>
-        <div class="method-grid">
-          <div class="method-step">
-            <div class="icon-badge"><svg><use href="#i-search"/></svg></div>
-            <div><h5>Audit &amp; Immersion</h5><p>Je m'immerge dans votre univers pour comprendre votre savoir-faire. On définit le planning de publication sur Facebook, Insta et TikTok.</p></div>
+        <div class="timeline">
+          <div class="tl-step">
+            <div class="tl-dot">1</div>
+            <div class="tl-body"><p class="tl-when">Premier rendez-vous</p><h5>Audit &amp; immersion</h5><p>Je m'immerge dans votre univers pour comprendre votre savoir-faire, vos clients et vos objectifs.</p></div>
           </div>
-          <div class="method-step">
-            <div class="icon-badge"><svg><use href="#i-video"/></svg></div>
-            <div><h5>Session de Capture (Sol &amp; Air)</h5><p>Je viens chez vous avec mon matériel. Captation au sol pour l'intimité, et plans aériens pour prendre de la hauteur. Je m'adapte à tous les reliefs.</p></div>
+          <div class="tl-step">
+            <div class="tl-dot">2</div>
+            <div class="tl-body"><p class="tl-when">Quelques jours après</p><h5>Calendrier éditorial</h5><p>Je vous présente votre calendrier de publication : sujets, formats et rythme, adaptés à votre activité et à la fréquence choisie.</p></div>
           </div>
-          <div class="method-step">
-            <div class="icon-badge"><svg><use href="#i-chart"/></svg></div>
-            <div><h5>Laboratoire Créatif</h5><p>Retouche colorimétrique, montage dynamique, sous-titrage et musiques tendances. Je prépare des contenus prêts à l'emploi qui respectent les codes.</p></div>
+          <div class="tl-step post">
+            <div class="tl-dot">3</div>
+            <div class="tl-body"><p class="tl-when">Début de mois → mi-mois</p><h5>Publication de votre contenu</h5><p>Je publie votre contenu sur vos réseaux, selon le calendrier établi.</p></div>
           </div>
-          <div class="method-step">
-            <div class="icon-badge"><svg><use href="#i-users"/></svg></div>
-            <div><h5>Décollage &amp; Analyse</h5><p>Mise en ligne stratégique aux heures de pointe. Chaque mois, on analyse les chiffres ensemble : portée, engagements, et impact réel.</p></div>
+          <div class="tl-step">
+            <div class="tl-dot">4</div>
+            <div class="tl-body"><p class="tl-when">Milieu du mois</p><h5>Rendez-vous annexe</h5><p>Nouvelle visite : photos et vidéos pour alimenter la suite du mois, et point pour voir s'il faut apporter des modifications.</p></div>
+          </div>
+          <div class="tl-step post">
+            <div class="tl-dot">5</div>
+            <div class="tl-body"><p class="tl-when">Mi-mois → fin de mois</p><h5>Publication de votre contenu</h5><p>Je continue à publier, en intégrant les nouveaux contenus et les ajustements décidés.</p></div>
+          </div>
+          <div class="tl-step">
+            <div class="tl-dot">6</div>
+            <div class="tl-body"><p class="tl-when">Fin de mois</p><h5>Analyse détaillée</h5><p>Bilan complet : les performances, les points qui se sont améliorés et ceux à améliorer pour le mois suivant.</p></div>
           </div>
         </div>
         <div class="method-foot"><a href="#contact" class="btn btn-propulse">Prêt pour le décollage ? <svg><use href="#i-arrow"/></svg></a></div>
@@ -973,77 +866,6 @@
   </div>
 </footer>
 
-<!-- ============ OFFER MODALS ============ -->
-<div class="modal-overlay" id="modal-m0">
-  <div class="modal-card">
-    <button class="modal-close" data-close><svg><use href="#i-x"/></svg></button>
-    <div class="head">
-      <div class="icon-badge" style="background:var(--orange); color:var(--space-bg);"><svg><use href="#i-zap"/></svg></div>
-      <div><h4>Pack Bienvenue</h4><p class="sub" style="color:var(--orange)">"Le coup de boost immédiat sans risque."</p></div>
-    </div>
-    <p class="modal-quote">"Faire mes preuves et transformer votre image en 48h."</p>
-    <p class="modal-inc-lbl">Inclus dans votre propulsion :</p>
-    <ul>
-      <li><svg><use href="#i-checkcircle"/></svg>Sur place (30-45 min) : Shooting professionnel + Conseils stratégiques</li>
-      <li><svg><use href="#i-checkcircle"/></svg>Contenu : 1 Reel dynamique (montage pro) + 3 Photos HD</li>
-      <li><svg><use href="#i-checkcircle"/></svg>Livraison : Fichiers prêts à poster envoyés sous 48h</li>
-      <li><svg><use href="#i-checkcircle"/></svg>Engagement : Aucun. Prestation unique pour tester l'impact</li>
-    </ul>
-    <div class="modal-stats">
-      <div><p class="lbl blue">Impact estimé</p><p class="v">Résultats visibles sous 48h (engagement &amp; vues)</p></div>
-      <div><p class="lbl">Engagement</p><p class="v">Prestation unique (One-shot)</p></div>
-    </div>
-    <a href="#contact" class="btn btn-propulse" data-close>Propulser mon projet <svg><use href="#i-arrow"/></svg></a>
-  </div>
-</div>
-
-<div class="modal-overlay" id="modal-m1">
-  <div class="modal-card">
-    <button class="modal-close" data-close><svg><use href="#i-x"/></svg></button>
-    <div class="head">
-      <div class="icon-badge" style="background:var(--blue); color:var(--space-bg);"><svg><use href="#i-trending"/></svg></div>
-      <div><h4>Pack Croissance</h4><p class="sub" style="color:var(--blue)">"Votre présence automatique chaque semaine."</p></div>
-    </div>
-    <p class="modal-quote">"Déléguer totalement pour gagner du temps et attirer des clients en continu."</p>
-    <p class="modal-inc-lbl">Inclus dans votre propulsion :</p>
-    <ul>
-      <li><svg><use href="#i-checkcircle"/></svg>Sur place (1h / mois) : On capte tout le contenu du mois en une seule fois</li>
-      <li><svg><use href="#i-checkcircle"/></svg>Contenu : 4 Reels (1 par semaine) + Stories hebdomadaires + Photos</li>
-      <li><svg><use href="#i-checkcircle"/></svg>Gestion : Je m'occupe de la programmation et de la publication pour vous</li>
-      <li><svg><use href="#i-checkcircle"/></svg>Le + : Stratégie de hashtags et audios tendances inclus</li>
-      <li><svg><use href="#i-checkcircle"/></svg>Engagement : Mensuel (recommandé 3 mois pour des résultats stables)</li>
-    </ul>
-    <div class="modal-stats">
-      <div><p class="lbl blue">Impact estimé</p><p class="v">Croissance stable après 3 mois</p></div>
-      <div><p class="lbl">Engagement</p><p class="v">Abonnement mensuel sans engagement</p></div>
-    </div>
-    <a href="#contact" class="btn btn-blue" data-close>Propulser mon projet <svg><use href="#i-arrow"/></svg></a>
-  </div>
-</div>
-
-<div class="modal-overlay" id="modal-m2">
-  <div class="modal-card">
-    <button class="modal-close" data-close><svg><use href="#i-x"/></svg></button>
-    <div class="head">
-      <div class="icon-badge" style="background:var(--red); color:#fff;"><svg><use href="#i-rocket"/></svg></div>
-      <div><h4>Pack Domination</h4><p class="sub" style="color:var(--red)">"Devenir la référence incontournable de la ville."</p></div>
-    </div>
-    <p class="modal-quote">"Une omniprésence agressive pour écraser la concurrence."</p>
-    <p class="modal-inc-lbl">Inclus dans votre propulsion :</p>
-    <ul>
-      <li><svg><use href="#i-checkcircle"/></svg>Sur place (2 sessions / mois) : Un suivi ultra-complet et des mises à jour constantes</li>
-      <li><svg><use href="#i-checkcircle"/></svg>Contenu : 12 Reels par mois + Stories quotidiennes + Shooting premium</li>
-      <li><svg><use href="#i-checkcircle"/></svg>Gestion : Gestion totale des réseaux, réponse aux commentaires et modération</li>
-      <li><svg><use href="#i-checkcircle"/></svg>Stratégie : Analyse poussée de la concurrence et optimisation des performances</li>
-    </ul>
-    <div class="modal-stats">
-      <div><p class="lbl blue">Impact estimé</p><p class="v">Domination locale sous 3 à 6 mois</p></div>
-      <div><p class="lbl">Engagement</p><p class="v">Accompagnement stratégique premium</p></div>
-    </div>
-    <a href="#contact" class="btn btn-red" data-close>Propulser mon projet <svg><use href="#i-arrow"/></svg></a>
-  </div>
-</div>
-
 <script>
 (function(){
   // header scroll shadow
@@ -1060,40 +882,6 @@
 
   // back to top
   document.getElementById('toTop').addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
-
-  // offer modals
-  document.querySelectorAll('[data-modal]').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      document.getElementById('modal-' + btn.dataset.modal).classList.add('open');
-    });
-  });
-  document.querySelectorAll('.modal-overlay').forEach(function(ov){
-    ov.addEventListener('click', function(e){ if(e.target === ov) ov.classList.remove('open'); });
-    ov.querySelectorAll('[data-close]').forEach(function(btn){
-      btn.addEventListener('click', function(){ ov.classList.remove('open'); });
-    });
-  });
-
-  // comparison duel tool
-  var DATA = {
-    0: {label:'PACK BIENVENUE', rows:['1 Reel unique','1 session (45 min)','Aucune','Aucun','Analyse rapide','Inclus (Drone)','Aucun']},
-    1: {label:'PACK CROISSANCE', rows:["Jusqu'à 10 / semaine (Story, Posts, Reels)",'1 session (1h) / mois','2 plateformes au choix','Planning hebdomadaire','Analyse complète','Inclus (Drone)','Nouveaux clients potentiels']},
-    2: {label:'PACK DOMINATION', rows:['Illimité','2 sessions / mois','Illimité','Planning hebdomadaire','Analyse poussée avec IA','Inclus (Drone)','Nouveaux clients garantis']}
-  };
-  var LABELS = ['Contenus / semaine','Sessions de capture','Plateformes','Planning hebdomadaire','Analyse','Drone','Résultats'];
-  function renderCol(target, id){
-    var d = DATA[id];
-    var html = '';
-    for(var i=0;i<LABELS.length;i++){
-      html += '<div class="duel-row"><div class="lbl">'+LABELS[i]+'</div><div class="val">'+d.rows[i]+'</div></div>';
-    }
-    document.getElementById(target).innerHTML = html;
-  }
-  var selA = document.getElementById('dselA'), selB = document.getElementById('dselB');
-  function refresh(){ renderCol('dcolA', selA.value); renderCol('dcolB', selB.value); }
-  selA.addEventListener('change', refresh);
-  selB.addEventListener('change', refresh);
-  refresh();
 
   // contact form via formspree fetch
   var form = document.getElementById('contactForm');
